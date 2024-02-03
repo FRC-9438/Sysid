@@ -16,12 +16,8 @@ import edu.wpi.first.units.Velocity;
 import edu.wpi.first.units.Voltage;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.RobotController;
-import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.interfaces.Gyro;
-import frc.robot.Robot;
 import frc.robot.Constants.DriveConstants;
-import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
@@ -46,9 +42,9 @@ public class Drive extends SubsystemBase {
 
   // The left-side drive encoder
   private final RelativeEncoder flEncoder = m_flMotor.getEncoder();
-  private final RelativeEncoder frEncoder = m_flMotor.getEncoder();
-  private final RelativeEncoder blEncoder = m_flMotor.getEncoder();
-  private final RelativeEncoder brEncoder = m_flMotor.getEncoder();
+  private final RelativeEncoder frEncoder = m_frMotor.getEncoder();
+  private final RelativeEncoder blEncoder = m_blMotor.getEncoder();
+  private final RelativeEncoder brEncoder = m_brMotor.getEncoder();
 
 
 
